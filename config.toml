@@ -14,6 +14,10 @@ SectionPagesMenu = "main"
 
 [params]
 	author = "Weisd"
+	address = "北京"
+    email = "weishidavip@163.com"
+	work = "golang"
+
 
 [[menu.main]]
     name = "首页"

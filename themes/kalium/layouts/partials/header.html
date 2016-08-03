@@ -42,51 +42,40 @@
 <body class="blog body-lg-skin-kalium-default wpb-js-composer js-comp-ver-4.12 vc_responsive">
 	<!-- 小屏侧边栏 -->
 	<div class="mobile-menu-wrapper">
-		<div class="mobile-menu-container ps-container ps-theme-default" data-ps-id="ba537358-e9f8-6c4b-b48f-7203ada951fd">
+		<div class="mobile-menu-container  ps-container ps-theme-default" data-ps-id="ba537358-e9f8-6c4b-b48f-7203ada951fd">
 			<ul id="menu-main-menu" class="menu">
-				<li id="menu-item-2328" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2328"><a href="/">Home</a></li>
-				<li id="menu-item-3456" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3456"><a href="#da">Portfolio</a>
-					<ul class="sub-menu">
-						<li id="menu-item-3590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3590"><a href="/main/portfolio-2-col/">Portfolio 2 Col</a></li>
-						<li id="menu-item-3592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3592"><a href="/main/portfolio-3-col/">Portfolio 3 Col</a></li>
-						<li id="menu-item-3588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3588"><a href="/main/portfolio-4-col/">Portfolio 4 Col</a></li>
-						<li id="menu-item-3599" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3599"><a href="/main/no-spacing/">No Spacing</a></li>
-						<li id="menu-item-3330" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3330"><a href="/main/masonry-portfolio/">Masonry</a>
-							<ul class="sub-menu">
-								<li id="menu-item-3748" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3748"><a href="/main/masonry-portfolio/">Endless Load</a></li>
-								<li id="menu-item-3747" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3747"><a href="/main/masonry-portfolio/variant-1/">Variant 1</a></li>
-								<li id="menu-item-3749" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3749"><a href="/main/masonry-portfolio/variant-2/">Variant 2</a></li>
-								<li id="menu-item-4016" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4016"><a href="/main/masonry-portfolio/variant-3/">Variant 3</a></li>
-							</ul>
-						</li>
-						<li id="menu-item-3799" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3799"><a href="/main/masonry-v2/">Masonry V2</a></li>
-						<li id="menu-item-3803" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3803"><a href="/main/masonry-v3/">Masonry V3</a></li>
-						<li id="menu-item-3273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3273"><a href="/main/dribbble-portfolio/">Dribbble</a></li>
-						<li id="menu-item-3385" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3385"><a href="/main/blog/?blog-sidebar=right#">Portfolio Types</a>
-							<ul class="sub-menu">
-								<li id="menu-item-3460" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3460"><a href="/main/portfolio/capricho/">Side Portfolio</a></li>
-								<li id="menu-item-3459" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3459"><a href="/main/portfolio/desk-concept/">Columnized</a></li>
-								<li id="menu-item-3461" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3461"><a href="/main/portfolio/bergenfield/">Carousel</a></li>
-								<li id="menu-item-3458" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3458"><a href="/main/portfolio/cloud-inc/">Zig Zag</a></li>
-								<li id="menu-item-3457" class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3457"><a href="/main/portfolio/adestra/">Fullsize Slider</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				
-				<li id="menu-item-3764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3764"><a target="_blank" href="http://themeforest.net/item/kalium-creative-theme-for-professionals/10860525?ref=Laborator">Buy!</a>
-				</li>
-			</ul>		
-				
-			<form role="search" method="get" class="search-form" action="/main/">
-				<input type="search" class="search-field" placeholder="Search site..." value="" name="s" id="search_mobile_inp">
-			
-				<label for="search_mobile_inp">
-					<i class="fa fa-search"></i>
-				</label>
-				
-				<input type="submit" class="search-submit" value="Go">
-			</form>
+				{{ range .Site.Menus.main }}
+				<li  class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home "><a href="{{.URL}}">{{ .Name }}</a></li>
+				{{end}}
+			</ul>
+			<div class="single-blog-holder " style=" padding: 10px 30px;">
+	    			<div class="author-info-placement-left">
+		    			<div class="blog-author-holder has-no-description">
+							<div class="author-avatar">
+								<a href="/" class="author-link">
+									<img alt="" src="/images/logo.jpg" srcset="" class="avatar avatar-192 photo" height="192" width="192">
+								</a>	
+							</div>
+						</div>		    			
+						<div class="details">
+							<div class="date">
+								<i class="icon icon-basic-male"></i>{{.Site.Params.author}}
+							</div>
+							<div class="date">
+								<i class="icon icon-basic-geolocalize-05"></i>{{ .Site.Params.address }}	
+							</div>
+							<div class="date">
+								<i class="icon icon-basic-mail"></i>{{ .Site.Params.email }}	
+							</div>
+							<div class="date">
+								<i class="icon icon-basic-link"></i>{{ .Site.BaseURL }}	
+							</div>
+							<div class="date">
+								<i class="icon icon-basic-laptop"></i>{{ .Site.Params.email }}	
+							</div>
+						</div>
+	    			</div>
+	    		</div>	
 				
 			<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;">
 				<div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
@@ -100,130 +89,10 @@
 
 	<div class="mobile-menu-overlay"></div>
 	<!-- 顶部隐藏菜单 -->
-	<div class="top-menu-container menu-type-standard-menu menu-skin-dark">
-		<div class="container">
-			<div class="row row-table row-table-middle">
-				<div class="col-sm-4">
-					<nav class="top-menu menu-row-items-2">
-						<ul id="menu-sidebar-menu" class="menu">
-							<li id="menu-item-3752" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3752"><a href="/">Home</a></li>
-							<li id="menu-item-3753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3753"><a href="#weisd">About Me</a></li>
-							<li id="menu-item-3754" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-2937 current_page_item current_page_parent menu-item-3754"><a href="/main/blog/">Blog</a></li>
-							<li id="menu-item-3756" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3756"><a href="/main/portfolio/">Portfolio</a></li>
-							<li id="menu-item-3757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3757"><a href="/main/services/">Services</a></li>
-							<li id="menu-item-3755" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3755"><a href="/main/contact/">Contact</a></li>
-							<li id="menu-item-4133" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4133"><a target="_blank" href="http://themeforest.net/item/kalium-creative-theme-for-professionals/10860525?ref=Laborator">Buy Theme!</a></li>
-						</ul>					
-					</nav>
-				</div>	
-				<div class="col-sm-8">
-					<div class="row blog-sidebar">
-						<div class="col-sm-6">
-							<div class="sidebar-box-holder wp-widget text-3 widget_text">
-								<h3 class="sidebar-entry-title">Let’s work together</h3>		
-								<div class="textwidget">
-									<p>Like our work? Arrange a meeting with us at our office, We'll be happy to work with you!</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="sidebar-box-holder wp-widget text-4 widget_text">
-								<h3 class="sidebar-entry-title">Wanna join our crazy team?</h3>
-								<div class="textwidget">
-									<p>We are always looking for new talents and we were expecting you. Time to apply, buddy!</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	
 
-	</div>
-
-	<!-- 侧边菜单 -->
-	<div class="sidebar-menu-wrapper menu-type-standard-menu sidebar-alignment-right menu-skin-light">
-		<div class="sidebar-menu-container ps-container ps-theme-default ps-active-y" data-ps-id="4ec02756-ecfc-9058-3cea-093b66878009">
-			<a class="sidebar-menu-close" href="/main/blog/?blog-sidebar=right#"></a>
-			<div class="sidebar-main-menu">
-				<ul id="menu-sidebar-menu-1" class="menu">
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3752"><a href="/main/">Home</a></li>
-					<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3753"><a href="/main/about-me/">About Me</a></li>
-				</ul>		
-			</div>
-			
-			<div class="sidebar-menu-widgets blog-sidebar">
-				<div class="sidebar-box-holder wp-widget search-3 widget_search">
-					<div class="widget_search wp-widget">
-						<form role="search" method="get" class="search-form search-bar" action="/main/">
-							<label>
-								<span class="screen-reader-text">Search for:</span>
-								<input type="search" class="form-control search-field" placeholder="Search site..." value="" name="s" id="s" title="Search for:">
-							</label>
-							<input type="submit" class="search-submit go-button" id="searchsubmit" value="Go">
-						</form>
-					</div>
-				</div>
-				<div class="sidebar-box-holder wp-widget null-instagram-feed-5 null-instagram-feed">
-					<h3 class="sidebar-entry-title">Instagram.</h3>
-					<ul class="instagram-pics instagram-size-thumbnail">
-						<li class=""><a href="http://instagram.com/p/BIizZVMjZSV/" target="_self" class=""><img src="/images/13743434_823990694398166_822614896_n.jpg" alt="Adding some color on a Sunday 🌈 (📷: @onthere)" title="Adding some color on a Sunday 🌈 (📷: @onthere)" class=""></a></li>
-						<li class=""><a href="http://instagram.com/p/BIifKSkDh72/" target="_self" class=""><img src="/images/13696359_628247304001863_1985481667_n.jpg" alt="Dreaming about Cenote Ik Kil 💙 (📷: @taramilktea)" title="Dreaming about Cenote Ik Kil 💙 (📷: @taramilktea)" class=""></a></li>
-						<li class=""><a href="http://instagram.com/p/BIiOGsEDEhq/" target="_self" class=""><img src="/images/13731329_522576077939424_1319519435_n.jpg" alt="Prague colors 🌅 courtesy of @jacob. Check out @theluxurycollection for more luxurious inspiration!" title="Prague colors 🌅 courtesy of @jacob. Check out @theluxurycollection for more luxurious inspiration!" class=""></a></li>
-						<li class=""><a href="http://instagram.com/p/BIiGJtmjnyq/" target="_self" class=""><img src="/images/13743265_1721365604768252_21108988_n.jpg" alt="Stunning German castles 💚😳 Courtesy of @thefella! Tag your most magical photos with #beautifuldestinations" title="Stunning German castles 💚😳 Courtesy of @thefella! Tag your most magical photos with #beautifuldestinations" class=""></a></li>
-						<li class=""><a href="http://instagram.com/p/BIhuBwyD0cY/" target="_self" class=""><img src="/images/13725510_152858358478069_1765158045_n.jpg" alt="Sunset camel ride anyone? ❤️ Courtesy of @gustavoepfonseca! Tag your best travel shots with #beautifuldestinations" title="Sunset camel ride anyone? ❤️ Courtesy of @gustavoepfonseca! Tag your best travel shots with #beautifuldestinations" class=""></a></li>
-						<li class=""><a href="http://instagram.com/p/BIhX12zjWZa/" target="_self" class=""><img src="/images/13696983_1766846983561877_885750894_n.jpg" alt="Mountainside moments ❤️ Courtesy of @hobopeeba! Tag your best travel photos with #beautifuldestinations" title="Mountainside moments ❤️ Courtesy of @hobopeeba! Tag your best travel photos with #beautifuldestinations" class=""></a></li>
-						<li class=""><a href="http://instagram.com/p/BIgwPYYDS-X/" target="_self" class=""><img src="/images/13707282_894433970684246_17452622_n.jpg" alt="Making new friends 🐪 (📷: @doyoutravel)" title="Making new friends 🐪 (📷: @doyoutravel)" class=""></a></li>
-						<li class=""><a href="http://instagram.com/p/BIgR9L4Dni8/" target="_self" class=""><img src="/images/13694629_171869299893427_287593639_n.jpg" alt="#BDTravelTip: capture every moment ✨ (📷: @sennarelax)" title="#BDTravelTip: capture every moment ✨ (📷: @sennarelax)" class=""></a></li>
-					</ul>
-				</div>
-				<div class="sidebar-box-holder wp-widget tag_cloud-3 widget_tag_cloud">
-					<h3 class="sidebar-entry-title">Tags.</h3>
-					<div class="tagcloud">
-						<a href="/main/tag/design/" class="tag-link-26 tag-link-position-1" title="1 topic" style="font-size: 8pt;">design</a>
-						<a href="/main/tag/envato/" class="tag-link-19 tag-link-position-2" title="1 topic" style="font-size: 8pt;">envato</a>
-						<a href="/main/tag/kalium/" class="tag-link-21 tag-link-position-3" title="1 topic" style="font-size: 8pt;">kalium</a>
-						<a href="/main/tag/laborator/" class="tag-link-22 tag-link-position-4" title="2 topics" style="font-size: 22pt;">laborator</a>
-						<a href="/main/tag/music/" class="tag-link-35 tag-link-position-5" title="1 topic" style="font-size: 8pt;">music</a>
-						<a href="/main/tag/nightlife/" class="tag-link-36 tag-link-position-6" title="1 topic" style="font-size: 8pt;">nightlife</a>
-						<a href="/main/tag/themeforest/" class="tag-link-20 tag-link-position-7" title="1 topic" style="font-size: 8pt;">themeforest</a>
-					</div>
-				</div>
-				<div class="sidebar-box-holder wp-widget recent-posts-3 widget_recent_entries">		
-					<h3 class="sidebar-entry-title">Recent Posts.</h3>		
-					<ul>
-						<li>
-							<a href="/main/fashions-fade-style-is-eternal/">Fashions fade, style is eternal</a>
-							<span class="post-date">March 14, 2015</span>
-						</li>
-						<li>
-							<a href="/main/best-tips-for-a-successful-magazine/">Best Tips for a Successful Magazine</a>
-							<span class="post-date">March 13, 2015</span>
-						</li>
-						<li>
-							<a href="/main/audio-post/">Audio Post</a>
-							<span class="post-date">March 13, 2015</span>
-						</li>
-						<li>
-							<a href="/main/image-post/">Image Post</a>
-							<span class="post-date">March 13, 2015</span>
-						</li>
-						<li>
-							<a href="/main/designing-with-your-clients/">Image Gallery Post</a>
-							<span class="post-date">March 13, 2015</span>
-						</li>
-					</ul>
-				</div>				
-			</div>
-			
-			<div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 3px;">
-				<div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
-			</div>
-			<div class="ps-scrollbar-y-rail" style="top: 0px; height: 827px; right: -5px;">
-				<div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 547px;"></div>
-			</div>
-		</div>
-	</div>
+	<!-- 用户侧边 -->
+	{{partial "sidebar_user.html" .}}
 
 	<div class="sidebar-menu-disabler"></div>
 	
@@ -246,44 +115,16 @@
 							</a>						
 							<nav>
 								<ul id="menu-main-menu-1" class="menu">
-									{{ $currentNode := . }}
+
         							{{ range .Site.Menus.main }}
         							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2328"><a href="{{.URL}}">{{ .Name }}</a></li>
         							{{end}}
-        							<li class="top-menu-toggle menu-item menu-item-type-post_type menu-item-object-page menu-item-3590"><a href="/main/portfolio-2-col/">top-menu-toggle</a></li>
-											<li class="sidebar-menu-toggle  menu-item menu-item-type-post_type menu-item-object-page menu-item-3592"><a href="/main/portfolio-3-col/">sidebar-menu-toggle</a></li>
-									<!-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2328"><a href="/">Home</a></li>
-
-									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3456"><a href="#">Portfolio</a>
-										<ul class="sub-menu">
-											<li class="top-menu-toggle menu-item menu-item-type-post_type menu-item-object-page menu-item-3590"><a href="/main/portfolio-2-col/">top-menu-toggle</a></li>
-											<li class="sidebar-menu-toggle  menu-item menu-item-type-post_type menu-item-object-page menu-item-3592"><a href="/main/portfolio-3-col/">sidebar-menu-toggle</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3588"><a href="/main/portfolio-4-col/">Portfolio 4 Col</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3599"><a href="/main/no-spacing/">No Spacing</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3330"><a href="/main/masonry-portfolio/">Masonry</a>
-												<ul class="sub-menu">
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3748"><a href="/main/masonry-portfolio/">Endless Load</a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3747"><a href="/main/masonry-portfolio/variant-1/">Variant 1</a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3749"><a href="/main/masonry-portfolio/variant-2/">Variant 2</a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4016"><a href="/main/masonry-portfolio/variant-3/">Variant 3</a></li>
-												</ul>
-											</li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3799"><a href="/main/masonry-v2/">Masonry V2</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3803"><a href="/main/masonry-v3/">Masonry V3</a></li>
-											<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3273"><a href="/main/dribbble-portfolio/">Dribbble</a></li>
-											<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3385"><a href="/main/blog/?blog-sidebar=right#">Portfolio Types</a>
-												<ul class="sub-menu">
-													<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3460"><a href="/main/portfolio/capricho/">Side Portfolio</a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3459"><a href="/main/portfolio/desk-concept/">Columnized</a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3461"><a href="/main/portfolio/bergenfield/">Carousel</a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3458"><a href="/main/portfolio/cloud-inc/">Zig Zag</a></li>
-													<li class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-3457"><a href="/main/portfolio/adestra/">Fullsize Slider</a></li>
-												</ul>
-											</li>
-										</ul> 
-									</li>
-									<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3764"><a target="_blank" href="http://themeforest.net/item/kalium-creative-theme-for-professionals/10860525?ref=Laborator">Buy!</a></li>
-									-->
+        							<!-- <li class="top-menu-toggle menu-item menu-item-type-post_type menu-item-object-page menu-item-3590">
+        								<a href="/main/portfolio-2-col/">top-menu-toggle</a>
+        							</li>
+									<li class="sidebar-menu-toggle  menu-item menu-item-type-post_type menu-item-object-page menu-item-3592">
+										<a href="/main/portfolio-3-col/">sidebar-menu-toggle</a>
+									</li> -->
 								</ul>
 							</nav>
 						</div>
