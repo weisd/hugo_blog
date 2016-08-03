@@ -18,21 +18,21 @@
 							</div>
 	
 							<div class="author-details">
-								<a href="http://demo.kaliumtheme.com/main/author/admin/" class="author-link">		
+								<a href="/" class="author-link">		
 									<span class="author-name">
-										John Ive <em>Administrator</em>
+										{{.Site.Params.author}}
 									</span>
 								</a>		
 							</div>
 						</div>		    			
 						<div class="details">
 							<div class="date">
-								<i class="icon icon-basic-calendar"></i>13 March 2015	
+								<i class="icon icon-basic-calendar"></i>{{ .Date.Format "2006-01-02" }}	
 							</div>
 							
 							<div class="category">
 								<i class="icon icon-basic-folder-multiple"></i>
-								<a href="http://demo.kaliumtheme.com/main/category/magazine/" rel="category tag">Magazine</a>		
+								<a href="#" rel="category tag">Magazine</a>		
 							</div>
 						</div>
 	    			</div>
