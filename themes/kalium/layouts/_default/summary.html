@@ -5,29 +5,30 @@
 	    		<h2>
 		    		<a href="{{ .Permalink }}">{{.Title}}</a>
 		    	</h2>
-
+		    	<div>
 	    		{{.Summary}}
-
-
-
 	    		{{ if .Truncated }}
-	    			<p class="read-more-link">
+	    			
 			            <a href="{{ .RelPermalink }}">查看更多</a>
-			        </p>
+			       
 			    {{ end }}
+
+	    		<p class="read-more-link">
+	    		
+			     </p>
+			    </div>
 	    		<div class="details">
 					<div class="date">
-						<i class="icon icon-basic-calendar"></i>{{ .Date.Format "Jan 2, 2006" }}	
+						<i class="icon icon-basic-calendar"></i>{{ .Date.Format "2006-01-02 15:04" }}	
 					</div>
+					{{if .Params.tags}}
 					<div class="category">
-						<i class="icon icon-basic-folder-multiple"></i>
-						{{ range  .Params.categories}}
-							<a href="/categories/{{. | urlize}}" rel="category tag">{{.}}</a>	
-						{{end}}
+						<i class="icon icon-basic-bookmark"></i>
 						{{ range  .Params.tags}}
 	    					<a href="/tags/{{. | urlize}}" rel="tag">{{.}}</a> 
 	    				{{end}}	
 					</div>
+					{{end}}
 				</div>
 			</div>
 		</div>

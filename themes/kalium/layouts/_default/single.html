@@ -19,7 +19,7 @@
 			    				<div class="post-content post-formatting">
 			    				{{.Content}}
 			    				</div>
-			    				
+
 				    			<div class="tags-holder">
 				    				{{ range  .Params.tags}}
 				    				<a href="/tags/{{. | urlize}}" rel="tag">{{.}}</a> 
@@ -50,7 +50,7 @@
 						</div>		    			
 						<div class="details">
 							<div class="date">
-								<i class="icon icon-basic-calendar"></i>{{ .Date.Format "2006-01-02" }}	
+								<i class="icon icon-basic-calendar"></i>{{ .Date.Format "2006-01-02 15:04" }}	
 							</div>
 							
 							<div class="category">
