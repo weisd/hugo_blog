@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weisd Blog</title>
+    <link>http://replace-this-with-your-hugo-site.com/</link>
+    <description>Recent content on Weisd Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-Hans</language>
+    <lastBuildDate>Wed, 03 Aug 2016 15:07:45 +0800</lastBuildDate>
+    <atom:link href="http://replace-this-with-your-hugo-site.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>test2</title>
+      <link>http://replace-this-with-your-hugo-site.com/posts/test2/</link>
+      <pubDate>Wed, 03 Aug 2016 15:07:45 +0800</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/posts/test2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test1</title>
+      <link>http://replace-this-with-your-hugo-site.com/posts/test1/</link>
+      <pubDate>Wed, 03 Aug 2016 11:50:08 +0800</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/posts/test1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>test</title>
+      <link>http://replace-this-with-your-hugo-site.com/posts/test/</link>
+      <pubDate>Wed, 03 Aug 2016 11:49:20 +0800</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/posts/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>two</title>
+      <link>http://replace-this-with-your-hugo-site.com/posts/two/</link>
+      <pubDate>Tue, 02 Aug 2016 23:51:49 +0800</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/posts/two/</guid>
+      <description>&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two
+two&lt;/p&gt;
+
+&lt;p&gt;two
+two
+two
+two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two
+two&lt;/p&gt;
+
+&lt;p&gt;two
+two
+two
+two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two
+two&lt;/p&gt;
+
+&lt;p&gt;two
+two
+two
+two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two&lt;/p&gt;
+
+&lt;p&gt;two
+two&lt;/p&gt;
+
+&lt;p&gt;two
+two
+two&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>one</title>
+      <link>http://replace-this-with-your-hugo-site.com/posts/one/</link>
+      <pubDate>Tue, 02 Aug 2016 23:51:43 +0800</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/posts/one/</guid>
+      <description>&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one
+one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one
+one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one
+one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+
+&lt;p&gt;one&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>hello</title>
+      <link>http://replace-this-with-your-hugo-site.com/posts/hello/</link>
+      <pubDate>Tue, 02 Aug 2016 23:46:34 +0800</pubDate>
+      
+      <guid>http://replace-this-with-your-hugo-site.com/posts/hello/</guid>
+      <description>&lt;pre&gt;&lt;code&gt;package main
+
+import (
+	&amp;quot;flag&amp;quot;
+	&amp;quot;net/http&amp;quot;
+	&amp;quot;os&amp;quot;
+
+	&amp;quot;path/filepath&amp;quot;
+
+	&amp;quot;middleware/session&amp;quot;
+	templateMW &amp;quot;middleware/template&amp;quot;
+	&amp;quot;models&amp;quot;
+	&amp;quot;modules/api&amp;quot;
+	&amp;quot;modules/captcha&amp;quot;
+	&amp;quot;modules/log&amp;quot;
+	&amp;quot;modules/pongor&amp;quot;
+	&amp;quot;modules/snowflake&amp;quot;
+	&amp;quot;setting&amp;quot;
+
+	&amp;quot;github.com/labstack/echo&amp;quot;
+	&amp;quot;github.com/labstack/echo/engine&amp;quot;
+	&amp;quot;github.com/labstack/echo/engine/fasthttp&amp;quot;
+	&amp;quot;github.com/labstack/echo/engine/standard&amp;quot;
+	mw &amp;quot;github.com/labstack/echo/middleware&amp;quot;
+)
+
+var configPath string
+
+func init() {
+	pwd, _ := os.Getwd()
+	flag.StringVar(&amp;amp;configPath, &amp;quot;c&amp;quot;, filepath.Join(pwd, &amp;quot;./src/cmd/main/app.toml&amp;quot;), &amp;quot;-c /path/to/app.toml config gile&amp;quot;)
+}
+
+func bootstrap() {
+	if err := setting.InitConf(configPath); err != nil {
+		panic(err)
+	}
+
+	log.InitLogService(setting.Conf.Logs)
+
+	// 初始化 mysql
+	if err := models.InitModels(setting.Conf.Models); err != nil {
+		panic(err)
+	}
+	// 初始化 redis
+	models.InitRedis(setting.Conf.Redis)
+
+	if err := session.InitSession(setting.Conf.Session); err != nil {
+		panic(err)
+	}
+
+	captcha.InitCaptcha()
+
+	snowflake.InitWorker(setting.Conf.WorkerId)
+}
+
+func main() {
+	flag.Parse()
+
+	bootstrap()
+
+	start()
+
+	// go func() {
+	// 	log.Info(&amp;quot;pprof listen on %s&amp;quot;, setting.Conf.Web.Pprof)
+	// 	log.Error(&amp;quot;%v&amp;quot;, http.ListenAndServe(setting.Conf.Web.Pprof, nil))
+	// }()
+
+	// Echo instance
+	e := echo.New()
+
+	// render
+	render := pongor.GetRenderer(pongor.PongorOption{Directory: setting.Conf.Pongo.Directory, Reload: setting.Conf.Pongo.Reload})
+
+	e.SetRenderer(render)
+
+	// 固定返回值
+	e.SetHTTPErrorHandler(func(err error, c echo.Context) {
+
+		code := http.StatusInternalServerError
+		msg := &amp;quot;服务器错误&amp;quot;
+
+		switch err.(type) {
+		case *echo.HTTPError:
+			he := err.(*echo.HTTPError)
+			code = he.Code
+			msg = he.Message
+
+			if code == http.StatusUnauthorized {
+				if len(c.Response().Header().Get(echo.HeaderWWWAuthenticate)) &amp;gt; 0 {
+					c.Response().WriteHeader(http.StatusUnauthorized)
+					return
+				}
+			}
+
+		case *models.Err:
+			log.Error(&amp;quot;models ERR %s&amp;quot;, err.Error())
+
+			msg = &amp;quot;数据操作失败&amp;quot;
+
+		default:
+			// panic(err)
+			log.Error(&amp;quot;unknown ERR %T %v&amp;quot;, err, err)
+		}
+
+		if e.Debug() {
+			msg = err.Error()
+
+			// 不显示 404错误信息
+			if code != 404 {
+				log.Error(&amp;quot;%T, %v&amp;quot;, err, err)
+			}
+
+		}
+
+		if c.Request().Header().Get(&amp;quot;X-Requested-With&amp;quot;) == &amp;quot;XMLHttpRequest&amp;quot; {
+			// ajax 请求 返回json
+			c.JSON(http.StatusOK, api.RetErr(code, msg))
+			return
+		}
+
+		c.Render(http.StatusOK, &amp;quot;error.html&amp;quot;, map[string]interface{}{&amp;quot;code&amp;quot;: code, &amp;quot;msg&amp;quot;: msg})
+
+	})
+
+	if setting.Conf.Web.Debug {
+		e.SetDebug(true)
+	}
+
+	// Middleware
+	if setting.Conf.AccessLog.Enable {
+		file := setting.Conf.AccessLog.FilePath
+		if len(file) &amp;gt; 0 {
+
+			os.Mkdir(filepath.Dir(file), os.ModePerm)
+
+			f, err := os.OpenFile(file, os.O_CREATE|os.O_RDWR|os.O_APPEND, os.ModePerm)
+			if err != nil {
+				log.Error(&amp;quot;AccessLog OpenFile failed : %v &amp;quot;, err)
+				err = nil
+			}
+			e.Use(mw.LoggerWithConfig(mw.LoggerConfig{Output: f}))
+		} else {
+			e.Use(mw.Logger())
+		}
+	}
+
+	////////////////// middleware ///////////////
+
+	e.Use(mw.Recover())
+	e.Use(mw.Gzip())
+	e.Use(session.Sessioner())
+	e.Use(templateMW.GlobalData())
+
+	e.Static(&amp;quot;/public&amp;quot;, setting.Conf.Web.StaticDir)
+
+	// e.File(&amp;quot;/favicon.ico&amp;quot;, &amp;quot;public/favicon.ico&amp;quot;)
+	e.Get(&amp;quot;/favicon.ico&amp;quot;, func(c echo.Context) error {
+		return c.NoContent(http.StatusOK)
+	})
+
+	// Route =&amp;gt; handler
+	e.GET(&amp;quot;/&amp;quot;, func(c echo.Context) error {
+		return c.String(http.StatusOK, &amp;quot;Hello, World!\n&amp;quot;)
+	})
+
+	// 验证码
+	e.Get(&amp;quot;/captcha/*.png&amp;quot;, captcha.Server())
+
+	// 路由
+	router(e)
+	// 测试路由
+	// tester(e)
+
+	var server engine.Server
+
+	if setting.Conf.Web.Fasthttp {
+		server = fasthttp.New(setting.Conf.Web.Listen)
+	} else {
+		server = standard.New(setting.Conf.Web.Listen)
+	}
+
+	log.Info(&amp;quot;server use %T, listen on %s&amp;quot;, server, setting.Conf.Web.Listen)
+	// Start server
+	e.Run(server)
+
+}
+
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
