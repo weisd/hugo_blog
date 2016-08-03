@@ -24,61 +24,11 @@
 	                    {{ .Render "summary" }}
 	                {{ end }}
 					
-				</div>
-											
-				<div class="pagination-container align-center">
-					<span class="page-numbers current">1</span>
-					<a class="page-numbers" href="http://demo.kaliumtheme.com/main/blog/page/2/?blog-sidebar=right">2</a>
-					<a class="next page-numbers" href="http://demo.kaliumtheme.com/main/blog/page/2/?blog-sidebar=right">Next <i class="flaticon-arrow413"></i></a>
-				</div>	
+				</div>				
+				{{ partial "paginator.html" . }}	
 			</div>
 			<div class="col-md-3 col-sm-12">
-				<div class="blog-sidebar">
-					<div class="sidebar-box-holder wp-widget search-2 widget_search">
-						<div class="widget_search wp-widget">
-							<form role="search" method="get" class="search-form search-bar" action="http://demo.kaliumtheme.com/main/">
-								<label>
-									<span class="screen-reader-text">Search for:</span>
-									<input type="search" class="form-control search-field" placeholder="Search site..." value="" name="s" id="s" title="Search for:">
-								</label>
-								<input type="submit" class="search-submit go-button" id="searchsubmit" value="Go">
-							</form>
-						</div>
-					</div>
-					<div class="sidebar-box-holder wp-widget null-instagram-feed-3 null-instagram-feed">
-						<h3 class="sidebar-entry-title">Instagram.</h3>
-						<ul class="instagram-pics instagram-size-thumbnail">
-							<li class=""><a href="http://instagram.com/p/BIfPsXOgaNH/" target="_self" class=""><img src="/images/13722182_1153676098004913_1848465793_n.jpg" alt="#minimal #design #table #clock" title="#minimal #design #table #clock" class=""></a></li>
-						</ul>
-					</div>
-					<div class="sidebar-box-holder wp-widget tag_cloud-2 widget_tag_cloud">
-						<h3 class="sidebar-entry-title">Tags.</h3>
-						<div class="tagcloud">
-							<a href="http://demo.kaliumtheme.com/main/tag/design/" class="tag-link-26 tag-link-position-1" title="1 topic" style="font-size: 8pt;">design</a>
-						</div>
-					</div>
-					<div class="sidebar-box-holder wp-widget categories-2 widget_categories">
-						<h3 class="sidebar-entry-title">Categories</h3>	
-						<ul>
-							<li class="cat-item cat-item-7"><a href="http://demo.kaliumtheme.com/main/category/design-dev/">Design &amp; Dev</a> (3)
-							</li>
-						</ul>
-					</div>
-					<div class="sidebar-box-holder wp-widget recent-comments-3 widget_recent_comments">
-						<h3 class="sidebar-entry-title">Comments.</h3>
-						<ul id="recentcomments">
-							<li class="recentcomments"><span class="comment-author-link">inchenaim</span> on <a href="http://demo.kaliumtheme.com/main/best-tips-for-a-successful-magazine/#comment-160">Best Tips for a Successful Magazine</a></li>
-						</ul>
-					</div>	
-					<div class="sidebar-box-holder wp-widget recent-posts-2 widget_recent_entries">		
-						<h3 class="sidebar-entry-title">Latest Posts.</h3>		
-						<ul>
-							<li>
-					<a href="http://demo.kaliumtheme.com/main/fashions-fade-style-is-eternal/">Fashions fade, style is eternal</a>
-							</li>
-						</ul>
-					</div>		
-				</div>
+				{{partial "side.html" .}}
 			</div>
 		</div>
 	</div>

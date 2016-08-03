@@ -8,10 +8,12 @@
 
 	    		{{.Summary}}
 
+
+
 	    		{{ if .Truncated }}
-
+	    			<p class="read-more-link">
 			            <a href="{{ .RelPermalink }}">查看更多</a>
-
+			        </p>
 			    {{ end }}
 	    		<div class="details">
 					<div class="date">
@@ -19,7 +21,12 @@
 					</div>
 					<div class="category">
 						<i class="icon icon-basic-folder-multiple"></i>
-						<a href="{{ .Permalink }}" rel="category tag">tag</a>	
+						{{ range  .Params.categories}}
+							<a href="/categories/{{. | urlize}}" rel="category tag">{{.}}</a>	
+						{{end}}
+						{{ range  .Params.tags}}
+	    					<a href="/tags/{{. | urlize}}" rel="tag">{{.}}</a> 
+	    				{{end}}	
 					</div>
 				</div>
 			</div>
