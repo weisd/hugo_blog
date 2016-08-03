@@ -6,7 +6,7 @@ theme = "kalium"
 # 菜单根据session自动生成
 SectionPagesMenu = "main"
 # 每页显示数量
-Paginate = 3
+# Paginate = 10
 
 [taxonomies]
   category = "categories"

@@ -19,7 +19,7 @@
 	<link rel="stylesheet" id="font-awesome-css" href="/css/font-awesome.css" type="text/css" media="all">
 	<link rel="stylesheet" id="font-flaticons-css" href="/css/flaticon.css" type="text/css" media="all">
 	<link rel="stylesheet" id="font-lineaicons-css" href="/css/linea_iconfont.css" type="text/css" media="all">
-	<link rel="stylesheet" id="primary-font-css" href="/css/css" type="text/css" media="all">
+
 
 	<link rel="shortcut icon" href="/images/logo-min.png">
 	<link rel="apple-touch-icon-precomposed" href="/images/logo-min.png">
@@ -240,8 +240,8 @@
 						</a>
 					</div>				
 					<div class="menu-column">
-						<div class="standard-menu-container menu-bar-root-items-hidden menu-skin-dark reveal-fade">
-							<a class="menu-bar menu-skin-dark" href="#">
+						<div class="standard-menu-container menu-bar-root-items-hidden menu-skin-dark reveal-fade items-visible">
+							<a class="menu-bar menu-skin-dark " href="#">
 								<span class="ham"></span>
 							</a>						
 							<nav>
@@ -250,6 +250,8 @@
         							{{ range .Site.Menus.main }}
         							<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2328"><a href="{{.URL}}">{{ .Name }}</a></li>
         							{{end}}
+        							<li class="top-menu-toggle menu-item menu-item-type-post_type menu-item-object-page menu-item-3590"><a href="/main/portfolio-2-col/">top-menu-toggle</a></li>
+											<li class="sidebar-menu-toggle  menu-item menu-item-type-post_type menu-item-object-page menu-item-3592"><a href="/main/portfolio-3-col/">sidebar-menu-toggle</a></li>
 									<!-- <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-2328"><a href="/">Home</a></li>
 
 									<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3456"><a href="#">Portfolio</a>
